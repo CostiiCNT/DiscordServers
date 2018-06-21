@@ -23,7 +23,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("https://discord.gg/VksqgM9","-Help for more", {type: "LISTENING"});
+  bot.user.setActivity("IN MAINTENANCE..", {type: "WATCHING"});
 
 });
 
@@ -42,7 +42,7 @@ bot.on("message", async message => {
 bot.login('NDQyMzgxMzM2OTAxMTg5NjQy.Dc-BWQ.0r4G-pODxdqZNjyDSQT5LGLygDM')
 
 bot.on('message', message => {
-  if (message.content === '/owner') {
+  if (message.content === '-owner') {
       Promise.all([
           message.react('😎'),
           message.react('🤑'),
