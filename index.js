@@ -40,18 +40,3 @@ bot.on("message", async message => {
 });
 
 bot.login('NDQyMzgxMzM2OTAxMTg5NjQy.Dc-BWQ.0r4G-pODxdqZNjyDSQT5LGLygDM')
-
-bot.on('message', message => {
-  if (message.content === '-owner') {
-      Promise.all([
-          message.react('😎'),
-          message.react('🤑'),
-      ])
-          .catch(() => console.error('One of the emojis failed to react.'))
-      var embedserverinfo = new Discord.RichEmbed()
-      .setTitle(" OWNERSHIP-UL SERVER-ULUI ESTE: ")
-          .addField(message.guild.owner)
-          .setColor('#ff000')
-           message.channel.send(embedserverinfo);
-  }
-  })
